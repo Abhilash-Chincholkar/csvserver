@@ -1,0 +1,12 @@
+services:
+  csvserver:
+    image: infracloudio/csvserver:latest
+    ports:
+      - "9393:9300"
+    volumes: 
+      - ./inputFile:/csvserver/inputdata
+    env_file:
+      - csvserver.env
+    # environment:
+    #   - CSVSERVER_BORDER=${CSVSERVER_BORDER}
+    
